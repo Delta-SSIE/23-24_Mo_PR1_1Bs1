@@ -24,6 +24,36 @@
 
 
             Console.WriteLine("hodnota x je "+ x + ". Hodnota y je " + y + "." );
+
+            //Replit úkol Převod času
+            Console.Write("Zadej mi počet sekund a já je převedu na hodiny a minuty: ");
+            int cas = int.Parse(Console.ReadLine());
+            int sekundy;
+            int minuty;
+            int hodiny;
+            sekundy = cas % 60;
+            minuty = ((cas-sekundy) % 3600)/60;
+            hodiny = (cas-sekundy-(minuty*60)) / 3600;
+            Console.WriteLine(sekundy + " sekund a " + minuty + " minut a " + hodiny + " hodin");
+
+            //Přiřazovací operátory
+            int a = 3;
+            int b = 2;
+            //Delší zápis
+            a = a * 2;
+            b = b + 2;
+            //Zkrácený zápis, pomocí přiřazovacího operátoru
+            a *= 2;
+            b += 2;
+
+            //Porovnávací operátory
+            int k = 200;
+            int p = 500;
+            //Ověření podmínky, pokud platí vypíše se TRUE a pokud neplatí vypíše se FALSE
+            Console.WriteLine(k < p);
+            Console.WriteLine(k > p);
+
+
         }
     }
 }
